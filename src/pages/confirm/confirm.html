@@ -1,0 +1,12 @@
+<ion-content padding>
+
+	<ion-grid style="height: 100%">
+		<ion-row justify-content-center align-items-center style="height: 100%">
+			<h2>Voulez-vous envoyer cet arbre à Claire Nowak pour qu'elle l'identifie ?</h2>
+			<img [src]="base64Image" *ngIf="base64Image" />
+			<button ion-button block round (click)="sendMail()">Oui</button>
+			<button ion-button block round outline (click)="cancel()">Non</button>
+		</ion-row>
+	</ion-grid>
+
+</ion-content>

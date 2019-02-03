@@ -33,3 +33,7 @@ $RECYCLE.BIN/
 .DS_Store
 Thumbs.db
 UserInterfaceState.xcuserstate
+
+*.DS_Store
+¨.apk
+my-release-key.jks
