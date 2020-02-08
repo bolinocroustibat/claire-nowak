@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='utf-8'?>
-<widget id="com.ac.claire_nowak" version="0.3" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+<widget id="com.ac.clairenowak" version="0.3" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
     <name>CLAIRE-NOWAK</name>
     <description>CLAIRE NOWAK identifie les arbres grâce à un algorithme de machine learning avancé.</description>
     <author email="moi@adriencarpentier.com" href="https://adriencarpentier.com/">Adrien Carpentier</author>
