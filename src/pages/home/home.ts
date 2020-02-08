@@ -13,7 +13,7 @@ export class HomePage {
 		public navCtrl: NavController,
 		private _camera: Camera,
 		private _toastCtrl: ToastController
-	) {}
+	) { }
 
 	choosePicture() {
 		const options: CameraOptions = {
@@ -23,22 +23,23 @@ export class HomePage {
 			destinationType: this._camera.DestinationType.DATA_URL,
 			encodingType: this._camera.EncodingType.JPEG,
 			mediaType: this._camera.MediaType.PICTURE,
-			sourceType : this._camera.PictureSourceType.PHOTOLIBRARY
+			sourceType: this._camera.PictureSourceType.PHOTOLIBRARY,
+			correctOrientation: true
 		}
 		this._camera.getPicture(options).then(
 			(imageData) => {
-			// imageData is either a base64 encoded string or a file URI
-			// If it's base64:
-			this.navCtrl.push(ConfirmPage, { image: imageData });
-		}, (err) => {
-			// Handle error
-			let toast = this._toastCtrl.create({
-				message: "Erreur, avez-vous bien une galerie de photos sur votre téléphone ?",
-				duration: 3000,
-				position: 'top'
+				// imageData is either a base64 encoded string or a file URI
+				// If it's base64:
+				this.navCtrl.push(ConfirmPage, { image: imageData });
+			}, (err) => {
+				// Handle error
+				let toast = this._toastCtrl.create({
+					message: "Erreur, avez-vous bien une galerie de photos sur votre téléphone ?",
+					duration: 3000,
+					position: 'top'
+				});
+				toast.present();
 			});
-			toast.present();
-		});
 	}
 
 	takePicture() {
@@ -48,7 +49,8 @@ export class HomePage {
 			targetHeight: 1600,
 			destinationType: this._camera.DestinationType.DATA_URL,
 			encodingType: this._camera.EncodingType.JPEG,
-			mediaType: this._camera.MediaType.PICTURE
+			mediaType: this._camera.MediaType.PICTURE,
+			correctOrientation: true
 		}
 		this._camera.getPicture(options).then(
 			(imageData) => {

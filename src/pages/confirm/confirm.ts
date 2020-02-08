@@ -15,9 +15,10 @@ export class ConfirmPage {
 		public navCtrl: NavController,
 		public navParams: NavParams,
 		private _emailComposer: EmailComposer,
-		private _toastCtrl: ToastController) {
-			this.imageData = navParams.get("image");
-			this.base64Image = 'data:image/jpeg;base64,' + navParams.get("image");
+		private _toastCtrl: ToastController
+	) {
+		this.imageData = navParams.get("image");
+		this.base64Image = 'data:image/jpeg;base64,' + navParams.get("image");
 	}
 
 	cancel() {
