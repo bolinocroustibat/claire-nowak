@@ -9,3 +9,7 @@ ionic serve
 ```sh
 ionic cordova build --release android
 ```
+
+## Publish on Google Play Store
+
+https://ionicframework.com/docs/v1/guide/publishing.html
