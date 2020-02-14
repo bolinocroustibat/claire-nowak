@@ -1,4 +1,4 @@
-## Serve locally
+## Serve/test locally
 
 ```sh
 ionic serve
